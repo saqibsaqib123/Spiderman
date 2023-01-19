@@ -1,0 +1,177 @@
+:root {
+    --main-bg-color: linear-gradient(to bottom, rgb(255, 0, 0), rgb(0, 0, 0));
+}
+
+@keyframes spide-search {
+    60% {
+        transform: rotate(3turn);
+    }
+
+    100% {
+        transform: translate(-617px, -312px);
+    }
+}
+
+@keyframes change-color {
+
+    0% {
+        color: rgb(0, 0, 0);
+    }
+
+    40%,
+    60% {
+        color: rgb(176 28 28);
+    }
+
+    100% {
+        color: rgb(0, 0, 0);
+    }
+}
+
+/* @keyframes change-scale {
+
+    0%,
+    10% {
+        transform: scale(0.82);
+    }
+
+    40%,
+    60% {
+        transform: scale(1.12);
+    }
+
+    100% {
+        transform: scale(0.82);
+    }
+} */
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+}
+
+header {
+    width: 100%;
+}
+
+nav {
+    background-image: var(--main-bg-color);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 21vh;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0px 71px;
+    padding-bottom: 21px;
+    color: #000000;
+    font-size: 28px;
+    font-weight: 700;
+    text-shadow: -2px -2px 6px #880000;
+}
+
+main {
+    background-image: url('format-arw-PXjQaGxi4JA-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 105em;
+}
+
+.avenger-logo {
+    position: sticky;
+    top: 12px;
+    left: 10px;
+    height: 17vh;
+}
+
+
+.spide-logo {
+    width: 81px;
+    position: absolute;
+    left: 632px;
+    top: 312px;
+    animation: spide-search 6s cubic-bezier(0, 0, 0.23, 1.2) 0.2s forwards;
+}
+
+.fir-line {
+    font-family: 'Shadows Into Light', cursive;
+    position: relative;
+    top: -34px;
+    left: 91px;
+    width: 573px;
+    height: fit-content;
+    font-size: 49px;
+    font-weight: bold;
+    animation: change-color 7s ease-in-out 0s infinite normal none;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
+/* .spide-logo-2 {
+    position: absolute;
+    top: 1262px;
+    left: 470px;
+    width: 305px;
+    animation: change-scale 4s infinite normal;
+} */
+
+.card {
+    color: white;
+    width: 14rem;
+    position: relative;
+    top: 150px;
+    background: #9d29294d;
+    border-radius: 8px;
+}
+
+.card-img {
+    width: 14em;
+    border-radius: 8px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-title {
+    font-size: 28px;
+    color: #970000;
+}
+
+.card-text {
+    padding: 3px 9px 6px 9px;
+}
+
+#card-2 {
+    top: 492px;
+}
+
+video {
+    width: 14em
+}
+
+footer {
+    background-image: var(--main-bg-color);
+    display: flex;
+    height: 76px;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+footer span {
+    padding-bottom: 7px;
+}
