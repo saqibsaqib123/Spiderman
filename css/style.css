@@ -1,5 +1,6 @@
 :root {
-    --main-bg-color: linear-gradient(to bottom, rgb(255, 0, 0), rgb(0, 0, 0));
+    --heading-color: #F8F7F9;
+    --text-color: rgba(248, 247, 249, 0.5);
 }
 
 @keyframes change-opacity {
@@ -12,23 +13,6 @@
         opacity: 1;
     }
 }
-
-/* @keyframes change-scale {
-
-    0%,
-    10% {
-        transform: scale(0.82);
-    }
-
-    40%,
-    60% {
-        transform: scale(1.12);
-    }
-
-    100% {
-        transform: scale(0.82);
-    }
-} */
 
 * {
     margin: 0px;
@@ -44,10 +28,9 @@ header {
 }
 
 nav {
-    background-image: var(--main-bg-color);
+    background: linear-gradient(to bottom, rgb(255, 0, 0), rgb(0, 0, 0));
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
     height: 21vh;
 }
 
@@ -55,14 +38,15 @@ nav ul {
     list-style: none;
     display: flex;
     align-items: center;
-    justify-content: center;
+    width: 85%;
+    justify-content: space-evenly;
 }
 
-nav ul li {
-    margin: 0 3vw;
+nav ul li a {
     color: #000000;
     font-size: calc(1rem + 0.5vw);
-    text-shadow: -2px -2px 6px #880000;
+    text-shadow: -5px -2px 4px black;
+    text-decoration: none;
 }
 
 main {
@@ -96,29 +80,24 @@ main {
     text-align: center;
     color: red;
     animation: change-opacity 2s ease-in-out 1s infinite alternate-reverse none;
-    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
 }
 
-/* .spide-logo-2 {
-    position: absolute;
-    top: 1262px;
-    left: 470px;
-    width: 305px;
-    animation: change-scale 4s infinite normal;
-} */
-
 .card {
-    color: white;
-    width: 14rem;
-    position: relative;
-    top: 150px;
+    width: 16vw;
+    min-width: 116px;
     background: #9d29294d;
     border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 31em;
 }
 
 .card-img {
-    width: 14em;
+    width: 15vw;
     border-radius: 8px;
+    margin-top: 7px;
+    box-shadow: 0px 0px 6px 4px black;
 }
 
 .card-body {
@@ -127,12 +106,13 @@ main {
     align-items: center;
 }
 
-.card-title {
+.card-body h5 {
     font-size: 28px;
     color: #970000;
 }
 
-.card-text {
+.card-body p {
+    color: var(--text-color);
     padding: 3px 9px 6px 9px;
 }
 
@@ -145,7 +125,7 @@ video {
 }
 
 footer {
-    background-image: var(--main-bg-color);
+    background-image: linear-gradient(to top, rgb(255, 0, 0), rgb(0, 0, 0));
     display: flex;
     height: 76px;
     align-items: center;
