@@ -12,19 +12,14 @@
     }
 }
 
-@keyframes change-color {
+@keyframes change-opacity {
 
     0% {
-        color: rgb(0, 0, 0);
-    }
-
-    40%,
-    60% {
-        color: rgb(176 28 28);
+        opacity: 0.05;
     }
 
     100% {
-        color: rgb(0, 0, 0);
+        opacity: 1;
     }
 }
 
@@ -97,24 +92,22 @@ main {
 }
 
 
-.spide-logo {
-    width: 81px;
-    position: absolute;
-    left: 632px;
-    top: 312px;
+.spide-logo {    width: 6vw;
+    min-width: 40px;
+    position: relative;
+    left: 39.8em;
+    top: 16em;
     animation: spide-search 6s cubic-bezier(0, 0, 0.23, 1.2) 0.2s forwards;
 }
 
-.fir-line {
-    font-family: 'Shadows Into Light', cursive;
-    position: relative;
-    top: -34px;
-    left: 91px;
+.first-line {
     width: 573px;
+    margin: 9px 22px;
     height: fit-content;
-    font-size: 49px;
-    font-weight: bold;
-    animation: change-color 7s ease-in-out 0s infinite normal none;
+    font-size: calc(1rem + 2vw);
+    text-align: center;
+    color: red;
+    animation: change-opacity 2s ease-in-out 1s infinite alternate-reverse none;
     /* animation: name duration timing-function delay iteration-count direction fill-mode; */
 }
 
